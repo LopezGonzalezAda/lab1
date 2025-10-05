@@ -2,17 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My News Portal</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1EH6fQvZbWh9v1Zl+3GmZl5/1qDkF0Q5P5dR7u1zK4y" crossorigin="anonymous">
+  <style>
+    /* Small custom touches for a modern look */
+    body { background-color: #f8f9fa; }
+    .card-title { font-weight: 600; }
+    .news-card { transition: transform .18s ease, box-shadow .18s ease; }
+    .news-card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+  </style>
 </head>
-<body class="bg-light">
+<body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container"><span class="navbar-brand">My News Portal</span></div>
+    <div class="container">
+      <a class="navbar-brand" href="#">My News Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">World</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tech</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <main class="container my-4">
-    <div class="alert alert-info">Deployed from GitHub via Azure Static Web Apps (Free)(this is a test HOLA).</div>
+
+  <!-- Main content -->
+  <main class="container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h1 class="h3 mb-0">Latest News</h1>
+      <small class="text-muted">Updated: Oct 5, 2025</small>
+    </div>
+
+    <!-- Responsive grid of cards -->
+    <div class="row g-3">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card news-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Global Summit on Climate Action Concludes</h2>
+            <p class="card-text text-muted">Leaders reached a new agreement to accelerate clean energy adoption and fund resilience projects in vulnerable regions.</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <small class="text-muted">World • 2h ago</small>
+              <a href="#" class="btn btn-primary btn-sm">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card news-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Breakthrough in AI Helps Diagnose Rare Diseases</h2>
+            <p class="card-text text-muted">Researchers unveiled an AI model that improves early detection rates for several rare conditions using limited datasets.</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <small class="text-muted">Tech • 4h ago</small>
+              <a href="#" class="btn btn-primary btn-sm">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card news-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Local Startups See Funding Boost</h2>
+            <p class="card-text text-muted">A wave of seed investments is flowing into the region as accelerators expand their programs for early-stage founders.</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <small class="text-muted">Business • 6h ago</small>
+              <a href="#" class="btn btn-primary btn-sm">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card news-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Championship Match Ends in Dramatic Fashion</h2>
+            <p class="card-text text-muted">A last-minute goal capped a thrilling comeback, sending fans into celebration across the city streets.</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <small class="text-muted">Sports • 8h ago</small>
+              <a href="#" class="btn btn-primary btn-sm">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card news-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">New Art Exhibition Explores Urban Life</h2>
+            <p class="card-text text-muted">The gallery's latest show features immersive installations from emerging artists reflecting city experiences.</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <small class="text-muted">Culture • 1d ago</small>
+              <a href="#" class="btn btn-primary btn-sm">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card news-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">New Transit Line Approved for Construction</h2>
+            <p class="card-text text-muted">City council approved funding for a new transit line aimed at reducing commute times and emissions.</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <small class="text-muted">Local • 2d ago</small>
+              <a href="#" class="btn btn-primary btn-sm">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer class="text-center text-muted py-4"><small>© 2025 My News Portal</small></footer>
+
+  <footer class="bg-white border-top py-4 mt-4">
+    <div class="container text-center text-muted small">© 2025 My News Portal · Built with Bootstrap 5</div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QF1j3bq7x1Q0kH6YV7z9g3K1z9d8h6l2j3k8Z9p2l6s7f4v5t8" crossorigin="anonymous"></script>
 </body>
 </html>
